@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {Fragment, useEffect, useState} from 'react'
 import {motion} from 'framer-motion'
 import {Tooltip as ReactTooltip} from 'react-tooltip'
 
@@ -34,7 +34,7 @@ const Skills = () => {
               whileInView={{opacity: [0, 1]}}
               transition={{duration: 0.5}}
               className='app__skills-item app__flex'
-              key={skill.name}
+              key={skill._id}
             >
               <div
                 className='app__flex'
@@ -56,20 +56,19 @@ const Skills = () => {
                 <p className='bold-text'>{experience.year}</p>
               </div>
               <motion.div className='app__skills-exp-works'>
-                {experience.works.map((work, index) => (
-                  <>
+                {experience.works.map((work) => (
+                  <Fragment key={work.name}>
                     <motion.div
                       whileInView={{opacity: [0, 1]}}
                       transition={{duration: 0.5}}
                       className={'app__skills-exp-work'}
-                      key={work.name}
                       data-tooltip-id={'tooltipId'}
                       data-tooltip-content={work.desc}
                     >
                       <h4 className='bold-text'>{work.name}</h4>
                       <p className='p-text'>{work.company}</p>
                     </motion.div>
-                  </>
+                  </Fragment>
                 ))}
               </motion.div>
             </motion.div>

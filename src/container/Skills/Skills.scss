@@ -127,15 +127,18 @@
 }
 
 .app__skills-exp-year {
-  margin-right: 3rem;
+  margin-right: 1.5rem;
+  width: 320px;
 
   p {
     font-weight: 800;
     color: var(--secondary-color);
+    width: 100%;
   }
 
   @media screen and (max-width: 450px) {
     margin-right: 1rem;
+    width: 160px;
   }
 }
 

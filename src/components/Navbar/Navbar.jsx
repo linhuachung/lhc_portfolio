@@ -1,18 +1,30 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './Navbar.scss'
-import {images} from '../../constants'
 import {HiMenuAlt4, HiX} from 'react-icons/hi'
 import {motion} from 'framer-motion'
+import {LHCLogo} from '../../assets/lhc_logo'
 
-function Navbar() {
+function Navbar({getTheme}) {
   const [toggle, setToggle] = useState(false)
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme')
+  )
+  localStorage.setItem('theme', theme)
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme)
+    getTheme(theme)
+  }, [theme])
+  const handleModeTheme = (theme) => {
+    setTheme(theme)
+  }
   return (
     <nav className='app__navbar'>
       <div className='app__navbar-logo'>
-        <img src={images.logo} alt='logo' />
+        {/*<img src={images.lhc_logo} alt='logo' />*/}
+        <LHCLogo />
       </div>
       <ul className='app__navbar-links'>
-        {['home', 'about', 'work', 'skill', 'contact'].map((item) => (
+        {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
           <li key={`link-${item}`} className='app__flex p-text'>
             <div />
             <a href={`#${item}`}>{item}</a>
@@ -35,6 +47,16 @@ function Navbar() {
           </motion.div>
         )}
       </div>
+      {/*<div className='app__navbar-theme'>*/}
+      {/*  {theme === 'light' ?*/}
+      {/*    <button className='mode-theme' onClick={() => handleModeTheme('dark')}>*/}
+      {/*      <MdLightMode size={20} />*/}
+
+      {/*    </button> :*/}
+      {/*    <button className='mode-theme' onClick={() => handleModeTheme('light')}>*/}
+      {/*      <CiDark size={20} />*/}
+      {/*    </button>}*/}
+      {/*</div>*/}
     </nav>
   )
 }
