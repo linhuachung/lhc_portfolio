@@ -1,7 +1,7 @@
 export const LHCLogo = () => {
   return (
     <svg width='176' height='36' viewBox='0 0 263.90608546977023 90.66061927138351'
-         class='css-1j8o68f'>
+         className='css-1j8o68f'>
       <defs id='SvgjsDefs1015'></defs>
       <g id='SvgjsG1016' featurekey='G09qjj-0'
          transform='matrix(0.11723861464181941,0,0,0.11723861464181941,-13.620815379871845,-13.283135396701997)'

@@ -5,19 +5,12 @@ import {Tooltip as ReactTooltip} from 'react-tooltip'
 import {AppWrap, MotionWrap} from '../../wrapper'
 import {client, urlFor} from '../../client'
 import './Skills.scss'
+import {dataExperiences} from './workExperiences-data'
 
 const Skills = () => {
-  const [experiences, setExperiences] = useState([])
   const [skills, setSkills] = useState([])
-
   useEffect(() => {
-    const query = '*[_type == "experiences"]'
     const skillsQuery = '*[_type == "skills"]'
-
-    client.fetch(query).then((data) => {
-      setExperiences(data)
-    })
-
     client.fetch(skillsQuery).then((data) => {
       setSkills(data)
     })
@@ -47,7 +40,7 @@ const Skills = () => {
           ))}
         </motion.div>
         <div className='app__skills-exp'>
-          {experiences.map((experience) => (
+          {dataExperiences.map((experience) => (
             <motion.div
               className='app__skills-exp-item'
               key={experience.year}
