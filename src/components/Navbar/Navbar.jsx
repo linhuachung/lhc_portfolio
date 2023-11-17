@@ -3,6 +3,8 @@ import './Navbar.scss'
 import {HiMenuAlt4, HiX} from 'react-icons/hi'
 import {motion} from 'framer-motion'
 import {LHCLogo} from '../../assets/lhc_logo'
+import {MdLightMode} from 'react-icons/md'
+import {CiDark} from 'react-icons/ci'
 
 function Navbar({getTheme}) {
   const [toggle, setToggle] = useState(false)
@@ -47,16 +49,16 @@ function Navbar({getTheme}) {
           </motion.div>
         )}
       </div>
-      {/*<div className='app__navbar-theme'>*/}
-      {/*  {theme === 'light' ?*/}
-      {/*    <button className='mode-theme' onClick={() => handleModeTheme('dark')}>*/}
-      {/*      <MdLightMode size={20} />*/}
+      <div className='app__navbar-theme'>
+        {theme === 'light' ?
+          <button className='mode-theme' onClick={() => handleModeTheme('dark')}>
+            <MdLightMode size={25} color={'#6b7688'} />
 
-      {/*    </button> :*/}
-      {/*    <button className='mode-theme' onClick={() => handleModeTheme('light')}>*/}
-      {/*      <CiDark size={20} />*/}
-      {/*    </button>}*/}
-      {/*</div>*/}
+          </button> :
+          <button className='mode-theme' onClick={() => handleModeTheme('light')}>
+            <CiDark size={25} color={'#94A3B8'} />
+          </button>}
+      </div>
     </nav>
   )
 }

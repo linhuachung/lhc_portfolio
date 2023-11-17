@@ -194,3 +194,10 @@
     margin: 2rem 0;
   }
 }
+
+.dark {
+  .badge-cmp, .tag-cmp, .circle-cmp {
+    background: #020817;
+    border: 1px solid #384965;
+  }
+}

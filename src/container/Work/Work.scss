@@ -154,3 +154,40 @@
     top: -25px;
   }
 }
+
+.dark {
+  .app__work-portfolio {
+    .app__work-item {
+      background: #020817;
+      border: 1px solid #384965;
+
+      &:hover {
+        box-shadow: 0 0 8px #b5acad;
+      }
+    }
+  }
+
+  .app__work-hover {
+    background-color: rgba(0, 0, 0, 0.9);
+
+    a {
+      background-color: rgba(0, 0, 0, -0.1);
+    }
+
+    div {
+      background: #020817;
+      border: 1px solid #384965;
+
+      &:hover {
+        background: #384965;
+      }
+    }
+  }
+
+  .app__work-tag {
+    background: #020817;
+    border: 1px none #384965;
+    border-top-style: solid;
+    border-radius: 10px 10px 0 0
+  }
+}

@@ -159,3 +159,32 @@
     line-height: 2 !important;
   }
 }
+
+.dark {
+  .app__skills-item {
+    div {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #020817;
+      border: 1px solid #384965;
+
+      &:hover {
+        box-shadow: 0 0 8px #b5acad;
+      }
+    }
+  }
+
+  .app__skills-exp-year {
+    p {
+      color: #a6adff;
+    }
+  }
+
+  .app__skills-exp-work {
+    p {
+      font-weight: 200;
+      color: #a6adff;
+    }
+  }
+}

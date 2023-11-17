@@ -192,4 +192,31 @@
     background-color: #020817;
     color: #F8FAFC;
   }
+
+  .app__social {
+    div {
+      background-color: #020817;
+      border: 1px solid #384965;
+
+      svg {
+        color: var(--gray-color);
+      }
+
+      &:hover {
+        background-color: rgb(56, 73, 101);
+        border-color: rgb(56, 73, 101);
+
+        svg {
+          color: rgb(56, 73, 101);
+        }
+      }
+    }
+  }
+
+  .app__navigation-dot {
+    &:hover {
+      background-color: #384965;
+    }
+  }
+
 }

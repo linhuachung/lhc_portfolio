@@ -130,3 +130,37 @@
     margin: 1rem 0;
   }
 }
+
+.dark {
+  .app__footer-cards {
+    .app__footer-card {
+      background: #020817;
+      border: 1px solid #384965;
+
+      &:hover {
+        box-shadow: 0 0 8px #b5acad;
+      }
+    }
+
+  }
+
+  .app__footer-form {
+    div {
+      background: #020817;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    input, textarea {
+      background: #020817;
+      border: 1px solid #384965;
+      color: white;
+
+      &:hover {
+        box-shadow: 0 0 8px #b5acad;
+      }
+    }
+  }
+}
